@@ -1,0 +1,11 @@
+annotations
+app1.iml
+.dockerignore
+.gitignore
+pom.xml
+src
+target/classes
+target/generated-sources
+target/maven-*
+target/app1-*.original
+webapps
