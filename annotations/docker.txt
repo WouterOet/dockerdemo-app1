@@ -1,4 +1,10 @@
 docker run -it --rm \
--e db.url=jdbc:mysql://localhost:3306/app1 \
---add-host mysqlhost:192.168.178.24 \
--p 8080:8080 enschede/app1
+  -e "db.jdbcurl=jdbc:mysql://mysqlhost:3306/app1" \
+  -e "db.user=test" \
+  -e "amq.brokerurl=tcp://amqhost:61616" \
+  -e "amq.user=user" \
+  -e "amq.password=user" \
+  --add-host="mysqlhost:192.168.178.24" \
+  --add-host="amqhost:192.168.168.24" \
+  -p 8080:8080 \
+  enschede/app1
