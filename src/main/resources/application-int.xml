@@ -29,9 +29,6 @@
   
   <int:channel id="BerichtUit"/>
 
-  
-  
-  
   <bean id="bericht" class="org.apache.activemq.command.ActiveMQQueue">
     <constructor-arg value="queue/bericht"/>
   </bean>

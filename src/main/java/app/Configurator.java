@@ -38,7 +38,7 @@ public class Configurator {
 
     @Profile("docker")
     @Configuration
-    @PropertySource(name = "appProperties", value = "file:/etc/quintor-docker/app1.properties")
+    @PropertySource(name = "appProperties", value = "classpath:/config/default.properties")
     public static class DockerProperties {
         @PostConstruct
         public void init() {
